@@ -1,0 +1,247 @@
+/* ===== Paleta: fundo escuro com detalhes em azul ===== */
+:root {
+  --fundo: #0a1020;
+  --superficie: #111a2e;
+  --superficie-2: #16223b;
+  --borda: #1f2f4f;
+  --texto: #e6edf7;
+  --texto-suave: #9fb3d1;
+  --azul: #3b82f6;
+  --azul-claro: #60a5fa;
+  --azul-escuro: #1d4ed8;
+  --brilho: rgba(59, 130, 246, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 48px 20px 64px;
+  background: var(--fundo);
+  background-image: radial-gradient(
+    circle at 50% -10%,
+    rgba(59, 130, 246, 0.18),
+    transparent 55%
+  );
+  background-repeat: no-repeat;
+  color: var(--texto);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* ===== Título ===== */
+h1 {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  letter-spacing: -0.5px;
+  color: var(--azul-claro);
+  background: linear-gradient(90deg, var(--azul-claro), var(--azul));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Formulário ===== */
+.form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  font-size: 1rem;
+  color: var(--texto);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+  color: var(--texto-suave);
+  opacity: 0.7;
+}
+
+input:focus {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 4px var(--brilho);
+}
+
+button {
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s, filter 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.12);
+  box-shadow: 0 8px 20px var(--brilho);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ===== Mensagens de status ===== */
+#status {
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  text-align: center;
+  color: var(--azul-claro);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+}
+
+#status:empty {
+  display: none;
+}
+
+/* ===== Card do perfil ===== */
+#perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  padding: 32px 24px;
+  text-align: center;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+#perfil:empty {
+  display: none;
+}
+
+#perfil img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--azul);
+  box-shadow: 0 0 0 6px var(--brilho), 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#perfil h2 {
+  margin: 20px 0 0;
+  font-size: 1.6rem;
+  color: var(--texto);
+}
+
+#perfil p {
+  margin: 6px 0 0;
+  color: var(--texto-suave);
+}
+
+/* @login */
+#perfil p:nth-of-type(1) {
+  color: var(--azul-claro);
+  font-weight: 600;
+}
+
+/* bio */
+#perfil p:nth-of-type(2) {
+  max-width: 460px;
+  margin-top: 14px;
+}
+
+/* repositórios e seguidores */
+#perfil p:nth-of-type(3) {
+  margin-top: 18px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  color: var(--texto);
+  background: var(--superficie-2);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+}
+
+#perfil a {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 10px 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--azul-claro);
+  border: 1px solid var(--azul);
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+#perfil a:hover {
+  color: #ffffff;
+  background: var(--azul);
+  box-shadow: 0 8px 20px var(--brilho);
+}
+
+/* ===== Lista de repositórios ===== */
+#repos {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#repos li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  padding: 14px 18px;
+  color: var(--texto-suave);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-left: 4px solid var(--azul);
+  border-radius: 12px;
+  transition: transform 0.15s, border-color 0.2s, background 0.2s;
+}
+
+#repos li:hover {
+  transform: translateX(4px);
+  background: var(--superficie-2);
+  border-color: var(--azul);
+}
+
+#repos li a {
+  font-weight: 600;
+  color: var(--azul-claro);
+  text-decoration: none;
+}
+
+#repos li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ===== Celular ===== */
+@media (max-width: 480px) {
+  body {
+    padding: 32px 16px 48px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  #repos li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
