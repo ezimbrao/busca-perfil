@@ -2,9 +2,9 @@
 
 Aplicação web que busca perfis do GitHub pelo nome de usuário e exibe as informações principais do perfil e os repositórios mais recentes, consumindo a API pública do GitHub.
 
-🔗 **Ver no ar:** [LINK-DA-PAGINA-PUBLICADA]
+🔗 **Ver no ar:** https://ezimbrao.github.io/busca-perfil/
 
-<!-- Adicione aqui um print do projeto: ![Prévia do projeto](preview.png) -->
+![Prévia do projeto](preview.png)
 
 ## Funcionalidades
 
@@ -41,7 +41,7 @@ Não há dependências nem etapa de build.
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/ezimbrao/NOME-DO-REPOSITORIO.git
+   git clone https://github.com/ezimbrao/busca-perfil.git
    ```
 2. Abra o arquivo `index.html` no navegador.
 
@@ -62,4 +62,4 @@ A API do GitHub, sem autenticação, limita as requisições por hora para cada 
 **Enzo Zimbrão**
 
 - GitHub: [@ezimbrao](https://github.com/ezimbrao)
-- LinkedIn: [SEU-LINK-DO-LINKEDIN]
+- LinkedIn: https://www.linkedin.com/in/enzo-zimbr%C3%A3o/s
